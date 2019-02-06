@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+    <h1> Fitts Law – How much does body position affect trackpad ability? </h1>
+    <h2> Author:
+	Cory Flynn
+    </h2>
+    <h3> Participants:
+	Brian Fraga
+  Maddie Markette
+    </h3>
+  </head>
+  <body>
+    <summary>
+      Summary:<br>
+      Operating Question:<br>
+      Is a trackpad easier to control standing or sitting?<br>
+      <br>
+	    Setup:
+		  <p> To test this question, two college students were asked to complete the GoFittz Application test, designed by Scott MacKenzie.
+        The first participant tested the condition of sitting down before attempting the test standing. The second participant reversed the order of events.
+        When sitting down, the computer was resting on a desk. When standing, the computer was held for the participant. The result were conflicting as the
+        first participant had a better throughput sitting while the second participant recorded a better throughput standing. Because both participants were
+        better their first attempt, difficulty arises in discerning issues from the testing process.</p>
+    </summary>
+  </body>
+</html>
+
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Participants Condition');
+        data.addColumn('number', 'Throughput(bps)');
+        data.addRows([
+          ['Brian Sitting', 4.258],
+          ['Maddie Sitting', 2.646],
+          ['Brian Standing', 2.649],
+          ['Maddie Standing', 3.144],
+        ]);
+        var options = {'title':'How Standing Effects Throughput',
+                       'width':400,
+                       'height':300};
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="chart_div"></div>
+  </body>
+</html>
